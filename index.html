@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>L'Enraïmada · Picas × Sota el Cingle</title>
+<title>L'Enraïmada · Birra Picas × Sota el Cingle</title>
 <meta name="description" content="Saison amb most de sumoll. Una col·laboració de Picas i el Celler Sota el Cingle. Reserva les teves ampolles.">
 <meta property="og:title" content="L'Enraïmada">
 <meta property="og:description" content="Saison amb most de sumoll · Picas × Sota el Cingle">
@@ -127,19 +127,11 @@
   </div>
 
   <h1>L'Enraïmada</h1>
-  <p class="tag">Saison · most de sumoll · 33 cl</p>
+  <p class="tag">Una cervesa que neix entre vinyes i molta passió</p>
 
   <p class="intro">
-    Una col·laboració que ens fa molta il·lusió amb el Celler Sota el Cingle
-    (<a href="https://www.instagram.com/sotaelcingle/" target="_blank" rel="noopener">@sotaelcingle</a>):
-    una cervesa que neix entre vinyes i molta passió.
+  L'Enraïmada uneix la rusticitat de la saison belga amb la identitat vinícola catalana a través de la varietat autòctona sumoll, que li aporta caràcter i elegància vinosa.
   </p>
-
-  <details>
-    <summary>Què porta? 🍇</summary>
-    <p>L'Enraïmada uneix la rusticitat de la saison belga amb la identitat vinícola catalana a través de la varietat autòctona sumoll, que li aporta caràcter i elegància vinosa.</p>
-    <p>El resultat és una cervesa seca, ben carbonatada i especiada pel llevat rústic de saison, on el most de sumoll aporta notes de fruita blanca, com la pera o el raïm, i una acidesa i una frescor delicioses. Hem triat el llúpol específicament perquè acompanyi la malta i el raïm en perfecta harmonia.</p>
-  </details>
 
   <div id="demo" class="demo" hidden>Mode prova: falta configurar <code>SCRIPT_URL</code>. Les comandes NO es desen.</div>
 
@@ -157,16 +149,16 @@
     <input type="hidden" name="ampolles" id="ampolles" value="2">
 
     <label class="f" for="nom">Nom</label>
-    <input type="text" id="nom" name="nom" placeholder="Com et diem?" autocomplete="name" maxlength="80" required>
+    <input type="text" id="nom" name="nom" autocomplete="name" maxlength="80" required>
 
     <label class="f" for="telefon">Telèfon <small>(per quedar per l'entrega)</small></label>
-    <input type="tel" id="telefon" name="telefon" placeholder="6XX XXX XXX" autocomplete="tel" inputmode="tel" maxlength="20" required>
+    <input type="tel" id="telefon" name="telefon" autocomplete="tel" inputmode="tel" maxlength="20" required>
 
-    <label class="f" for="poblacio">On ets? <small>(opcional)</small></label>
-    <input type="text" id="poblacio" name="poblacio" placeholder="Poble o ciutat" maxlength="80">
+    <label class="f" for="poblacio">On t'ho portem? <small>(opcional)</small></label>
+    <input type="text" id="poblacio" name="poblacio" maxlength="80">
 
     <label class="f" for="notes">Alguna cosa més? <small>(opcional)</small></label>
-    <textarea id="notes" name="notes" maxlength="300" placeholder="Dubtes, horaris, declaracions d'amor a la saison…"></textarea>
+    <textarea id="notes" name="notes" maxlength="300" placeholder="Dubtes, declaracions d'amor a l'Enraïmada…"></textarea>
 
     <div class="hp" aria-hidden="true">
       <label>Web <input type="text" name="web" tabindex="-1" autocomplete="off"></label>
@@ -179,7 +171,7 @@
 
     <button class="btn" id="enviar" type="submit">Reservar les cerveses 🍻</button>
     <p class="error" id="error" role="alert"></p>
-    <p class="legal">Només fem servir aquestes dades per coordinar l'entrega i les esborrem quan s'acabi la tirada. Beu amb moderació (però beu-te-la, eh).</p>
+    <p class="legal">Responsables: Birra Picas i Celler Sota el Cingle. Només fem servir les teves dades per coordinar l'entrega i les esborrem quan en acabat. Es guarden a Google. Pots demanar veure-les, corregir-les o esborrar-les escrivint-nos. Beu amb moderació (però beu-te-la).</p>
   </form>
 
   <section id="ok" hidden>
@@ -187,19 +179,19 @@
     <h2 id="ok-titol">Fet!</h2>
     <p class="resum" id="ok-resum"></p>
     <p>Algun Picas o algun Sota el Cingle es posarà en contacte amb tu per portar-te les cerveses.</p>
-    <p>Preferim efectiu (jeje 😇), però si no, un Bizum també ens fa feliços.</p>
+    <p>Es paga a l'entrega.</p>
     <button class="link-btn" id="una-altra" type="button">Fer una altra comanda</button>
   </section>
 
   <section id="esgotada" hidden style="text-align:center">
     <p class="resum" style="font-size:18px">Ens hem quedat sense! 😢</p>
-    <p style="color:var(--muted)">Segueix-nos a Instagram per saber quan en tornem a fer.</p>
+    <p style="color:var(--muted)">Segueix-nos a Instagram per saber quan en tornem a fer!</p>
   </section>
 </main>
 
 <script>
   // ===== CONFIGURACIÓ =====
-  const SCRIPT_URL = 'https://script.google.com/macros/s/XXXXXXXX/exec'; // <-- URL de l'aplicació web d'Apps Script
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyXRFgbY6Y0iTp1K_-9cohphYIkJt8PENvX4yI0Qij-t82-gImOWurfpvNNkLXkZkex/exec'; // <-- URL de l'aplicació web d'Apps Script
   let cfg = { preu: 4, max: 24, restants: null }; // valors provisionals; el servidor els sobreescriu en carregar
 
   const configurat = !SCRIPT_URL.includes('XXXX');
