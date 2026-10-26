@@ -113,6 +113,7 @@
   #ok p { color: var(--muted); line-height: 1.55; margin: 0 0 12px; }
   #ok .resum { color: var(--text); font-size: 17px; }
   #ok .resum strong { color: var(--accent); }
+  #ok .resum .xifres { display: block; margin-top: 6px; font-family: Fraunces, Georgia, serif; font-size: 26px; font-weight: 700; color: var(--accent); }
   .link-btn { background: none; border: 0; color: var(--text); text-decoration: underline; font: inherit; font-size: 14px; cursor: pointer; margin-top: 6px; }
   [hidden] { display: none !important; }
 </style>
@@ -176,7 +177,7 @@
     <div class="emoji">🍻</div>
     <h2 id="ok-titol">Fet!</h2>
     <p class="resum" id="ok-resum"></p>
-    <p>Algun Picas o algun Sota el Cingle es posarà en contacte amb tu per portar-te les cerveses.</p>
+    <p>Algun Picas o algun Sotacingler es posarà en contacte amb tu per portar-te les cerveses.</p>
     <p>Es paga a l'entrega.</p>
     <button class="link-btn" id="una-altra" type="button">Fer una altra comanda</button>
   </section>
@@ -241,9 +242,8 @@
       $('#ok-titol').textContent = `Gràcies, ${primerNom}!`;
       $('#ok-resum').innerHTML = '';
       $('#ok-resum').append(
-        'Has reservat ', Object.assign(document.createElement('strong'), { textContent: `${res.ampolles} ${ampollaS(res.ampolles)}` }),
-        ' d\u2019Enraïmada. Total a pagar: ', Object.assign(document.createElement('strong'), { textContent: eur.format(res.total) }),
-        res.num ? ` (comanda núm. ${res.num}).` : '.'
+        'Has reservat L\u2019Enraïmada:',
+        Object.assign(document.createElement('span'), { className: 'xifres', textContent: `${res.ampolles} ${ampollaS(res.ampolles)} · ${eur.format(res.total)}` })
       );
       f.hidden = true; $('#ok').hidden = false;
       window.scrollTo({ top: 0, behavior: 'smooth' });
