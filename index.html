@@ -242,7 +242,7 @@
       $('#ok-titol').textContent = `Gràcies, ${primerNom}!`;
       $('#ok-resum').innerHTML = '';
       $('#ok-resum').append(
-        'Has reservat L\u2019Enraïmada:',
+        'Has reservat:',
         Object.assign(document.createElement('span'), { className: 'xifres', textContent: `${res.ampolles} ${ampollaS(res.ampolles)} · ${eur.format(res.total)}` })
       );
       f.hidden = true; $('#ok').hidden = false;
